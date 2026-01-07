@@ -1,0 +1,2389 @@
+:root {
+  /* --- Tipografía General (Ya definidas) --- */
+  --font-family-base: "Helvetica", Arial, sans-serif;
+  --font-family-secondary: "Georgia", serif;
+  --font-weight-bold: bold;
+  --font-weight-light: light;
+  --line-height-1-1: 1.1;
+  --line-height-1-2: 1.2;
+  --line-height-1-3: 1.3;
+  --line-height-1-6: 1.6;
+
+  /* --- Tamaños de Fuente (Base: Min-size: 767px) --- */
+  /* NOTA: Estos son los valores del primer set que creamos para < 1024px */
+  --font-size-headline70: 36px;
+  --font-size-headline50: 30px;
+  --font-size-headline36: 24px;
+  --font-size-headline30: 22px;
+  --font-size-headline26: 22px;
+  --font-size-headline24: 20px;
+
+  --font-size-body24: 18px;
+  --font-size-body20: 18px;
+  --font-size-keepxplore20: 18px;
+
+  --font-size-legend20: 12px;
+  --font-size-legend10: 10px;
+
+  --font-size-fixed22: 22px;
+  --font-size-fixed16: 16px;
+  --font-size-fixed14: 14px;
+
+  --font-size-quote50: 30px;
+  
+  /* colores */
+  --rolex-green: #006039;
+  --rolex-green-hover: #008e55;
+  --green: #127A49;
+  --ocean-green: #96F9CE;
+  --brown: #462C1E;
+  --brown50: rgba(70, 44, 30, 0.50);
+  --brown40: rgba(70, 44, 30, 0.40);
+  --brown20: rgba(70, 44, 30, 0.20);
+  --black: #212121;
+  --dark-grey: #767676;
+  --grey: #D4D4D4;
+  --light-grey: #eaeaea;
+  --beige: #F4EFEA;
+  --light-beige: #F9F7F4;
+  --white: #FFFFFF;
+  --red: #BC0000;
+  --gradient-navigation: linear-gradient(90deg, #0b3e27 0%, #197149 100%);
+
+  --rolex-grid-gap-small: 7px;
+  --rolex-grid-gap-default: 8px;
+
+  --btn-border-radius-pill: 32px;
+  --btn-border-radius-round: 50%;
+
+  --border-light: rgba(70, 44, 30, 0.20);
+
+  --margin-sep: 40px;
+}
+
+/* 💻 Media Query: Medium 1024px (Valores del set anterior) */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-headline70: 46px;
+    --font-size-headline50: 36px;
+    --font-size-headline36: 28px;
+    --font-size-headline30: 23px;
+    --font-size-headline26: 22px;
+    --font-size-headline24: 20px;
+
+    --font-size-body24: 20px;
+    --font-size-body20: 19px;
+    --font-size-keepxplore20: 19px;
+
+    --font-size-legend20: 13px;
+    --font-size-legend10: 11px;
+
+    --font-size-quote50: 32px;
+
+    --margin-sep: 60px;
+  }
+}
+
+/* 🖥️ Media Query: Medium 2 (1440px) - ¡Nuevos valores! */
+@media (min-width: 1440px) {
+  :root {
+    --font-size-headline70: 56px;
+    --font-size-headline50: 42px;
+    --font-size-headline36: 32px;
+    --font-size-headline30: 26px;
+    --font-size-headline26: 25px;
+    --font-size-headline24: 24px;
+
+    --font-size-body24: 22px;
+    --font-size-body20: 19px;
+    --font-size-keepxplore20: 19px;
+
+    --font-size-legend20: 15px;
+    --font-size-legend10: 13px;
+
+    --font-size-quote50: 40px;
+
+    --margin-sep: 80px;
+  }
+}
+
+/* 🚀 Media Query: Max-size (1920px) - ¡Nuevos valores! */
+@media (min-width: 1920px) {
+  :root {
+    --font-size-headline70: 70px;
+    --font-size-headline50: 50px;
+    --font-size-headline36: 36px;
+    --font-size-headline30: 30px;
+    --font-size-headline26: 26px;
+    --font-size-headline24: 24px;
+
+    --font-size-body24: 24px;
+    --font-size-body20: 20px;
+    --font-size-keepxplore20: 20px;
+
+    --font-size-legend20: 16px;
+    --font-size-legend10: 14px;
+
+    --font-size-quote50: 50px;
+
+    --margin-sep: 100px;
+  }
+}
+
+
+/* --- HEADLINES --- */
+.headline70 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline70);
+  line-height: var(--line-height-1-1);
+}
+
+.headline50 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline50);
+  line-height: var(--line-height-1-2);
+}
+
+.headline36 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline36);
+  line-height: var(--line-height-1-2);
+}
+
+.headline30 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline30);
+  line-height: var(--line-height-1-2);
+}
+
+.headline26 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline26);
+  line-height: var(--line-height-1-2);
+}
+
+.headline24 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-headline24);
+  line-height: var(--line-height-1-2);
+}
+
+/* --- BODY TEXT (BOLD) --- */
+.body24-bold {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body24);
+  line-height: var(--line-height-1-2);
+}
+
+.body20-bold {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body20);
+  line-height: var(--line-height-1-6);
+}
+
+/* --- BODY TEXT (LIGHT) --- */
+.body24-light {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-body24);
+  line-height: var(--line-height-1-2);
+}
+
+.body20-light {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-body20);
+  line-height: var(--line-height-1-6);
+}
+
+/* --- SPECIAL TEXT --- */
+.keepxplore20-bold {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-keepxplore20);
+  line-height: var(--line-height-1-2);
+}
+
+/* --- LEGEND TEXT (SMALL) --- */
+.legend20-bold {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-legend20);
+  line-height: var(--line-height-1-1);
+}
+
+.legend20-light {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-legend20);
+  line-height: var(--line-height-1-1);
+}
+
+.legend10-bold {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-legend10);
+  line-height: var(--line-height-1-1);
+}
+
+.legend10-light {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-legend10);
+  line-height: var(--line-height-1-1);
+}
+
+/* --- FIXED SIZES (Mantienen el mismo font-size en todos los breakpoints) --- */
+.fixed22 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-fixed22);
+  line-height: var(--line-height-1-6);
+}
+
+.fixed16 {
+  font-family: var(--font-family-base);
+  /* font-weight: var(--font-weight-bold); */
+  font-size: var(--font-size-fixed16);
+  line-height: var(--line-height-1-1);
+}
+
+.fixed14 {
+  font-family: var(--font-family-base);
+  /* font-weight: var(--font-weight-bold); */
+  font-size: var(--font-size-fixed14);
+  line-height: var(--line-height-1-1);
+}
+
+/* --- QUOTE --- */
+.quote50 {
+  font-family: var(--font-family-secondary); /* Usa Georgia, según tu imagen */
+  font-weight: regular; /* No definimos variable 'regular', pero se asume por defecto */
+  font-size: var(--font-size-quote50);
+  line-height: var(--line-height-1-3);
+}
+
+/* --- ROLEX GRILLA --- */
+
+.rolex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 calc(-1 * var(--rolex-grid-gap-small)) 0 0; /* Corrección de margen derecho para el gap */
+  width: 100%;
+  /* Aplica el gap de la grilla pequeña (0 a 767px) */
+  gap: var(--rolex-grid-gap-small);
+}
+
+.rolex-grid.center {
+  justify-content: center;
+}
+
+.rolex-grid.nogap {
+  gap: 0;
+}
+
+.rolex-grid.column {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 💻 Breakpoint: Medium y Large (768px y más) */
+@media (min-width: 768px) {
+  .rolex-grid {
+    /* El gap cambia a 8px */
+    gap: var(--rolex-grid-gap-default);
+    margin: 0 calc(-1 * var(--rolex-grid-gap-default)) 0 0; /* Corrección de margen derecho */
+  }
+}
+
+/* --- Grilla Small: 6 columnas (0 - 767px) --- */
+
+.rolex-col-sm-1 { width: calc(100% / 6 * 1 - var(--rolex-grid-gap-small)); }
+.rolex-col-sm-2 { width: calc(100% / 6 * 2 - var(--rolex-grid-gap-small)); }
+.rolex-col-sm-3 { width: calc(100% / 6 * 3 - var(--rolex-grid-gap-small)); }
+.rolex-col-sm-4 { width: calc(100% / 6 * 4 - var(--rolex-grid-gap-small)); }
+.rolex-col-sm-5 { width: calc(100% / 6 * 5 - var(--rolex-grid-gap-small)); }
+.rolex-col-sm-6 { width: calc(100% / 6 * 6 - var(--rolex-grid-gap-small)); }
+
+/* --- Grilla Medium: 12 columnas (768px - 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rolex-col-md-1 { width: calc(100% / 12 * 1 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-2 { width: calc(100% / 12 * 2 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-3 { width: calc(100% / 12 * 3 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-4 { width: calc(100% / 12 * 4 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-5 { width: calc(100% / 12 * 5 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-6 { width: calc(100% / 12 * 6 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-7 { width: calc(100% / 12 * 7 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-8 { width: calc(100% / 12 * 8 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-9 { width: calc(100% / 12 * 9 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-10 { width: calc(100% / 12 * 10 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-11 { width: calc(100% / 12 * 11 - var(--rolex-grid-gap-default)); }
+  .rolex-col-md-12 { width: calc(100% / 12 * 12 - var(--rolex-grid-gap-default)); }
+}
+
+/* --- Grilla Large: 12 columnas (1025px y más) --- */
+@media (min-width: 1025px) {
+  .rolex-col-lg-1 { width: calc(100% / 12 * 1 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-2 { width: calc(100% / 12 * 2 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-3 { width: calc(100% / 12 * 3 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-4 { width: calc(100% / 12 * 4 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-5 { width: calc(100% / 12 * 5 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-6 { width: calc(100% / 12 * 6 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-7 { width: calc(100% / 12 * 7 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-8 { width: calc(100% / 12 * 8 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-9 { width: calc(100% / 12 * 9 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-10 { width: calc(100% / 12 * 10 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-11 { width: calc(100% / 12 * 11 - var(--rolex-grid-gap-default)); }
+  .rolex-col-lg-12 { width: calc(100% / 12 * 12 - var(--rolex-grid-gap-default)); }
+}
+
+.rolex-item-fake {
+  width: 100%;
+  height: 200px;
+  background-color: var(--dark-grey);
+}
+
+/* --- Estilo Base de Botón (Aplicado a todos los CTA de texto) --- */
+.rolex-btn {
+  /* Tipografía (Helvetica bold 14px y line-height 1.2 asumido) */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: 14px; /* Tamaño específico del CTA principal */
+  line-height: var(--line-height-1-2);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  
+  /* Borde redondeado de 32px (efecto píldora) */
+  border-radius: var(--btn-border-radius-pill);
+  
+  /* Propiedad para alinear iconos con el texto */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Padding horizontal de 30px y altura de 44px */
+  height: 44px;
+  padding: 0 30px;
+
+  transition: all 0.3s ease-in;
+}
+
+/* --- Primary CTA (Fondo verde oscuro, Texto blanco) --- */
+.rolex-btn.primary {
+  background-color: var(--rolex-green); /* Usamos el verde Rolex como principal */
+  color: var(--white);
+  border: none;
+}
+
+.rolex-btn.primary:hover {
+  text-decoration: none;
+  background-color: var(--rolex-green-hover);
+}
+
+/* --- Primary CTA - Icon (Mismo estilo + espacio para el icono) --- */
+.rolex-btn.primary-icon {
+  background-color: var(--rolex-green); 
+  color: var(--white);
+  border: none;
+  /* Icono va 8px antes/después del texto */
+}
+
+/* Espaciado para el icono dentro del Primary CTA */
+.rolex-btn.primary-icon .icon-after {
+  margin-left: 8px;
+}
+
+.rolex-btn.primary-icon .icon-before {
+  margin-right: 8px;
+}
+
+.rolex-btn.primary-icon .icon img {
+  display: block;
+  width: 12px;
+  margin: 0;
+}
+
+.rolex-btn.primary-icon .icon img.white {
+  filter: invert(1) brightness(2);
+}
+
+/* --- Secondary CTA (Fondo claro, Borde, Icono después) --- */
+.rolex-btn.secondary {
+  /* Fondo Beige/Claro, Borde Verde y Texto Verde */
+  background-color: var(--light-beige); 
+  border: 1px solid var(--rolex-green); 
+  color: var(--rolex-green);
+  
+  /* Altura de 32px (44px total - 1px de borde superior e inferior) */
+  height: 42px; /* Para que el padding 0 30px mantenga la altura con borde */
+  padding: 0 30px; 
+}
+
+/* --- Secondary CTA (Fondo claro, Borde, Icono después) --- */
+.rolex-btn.secondaryNoBorder {
+  background-color: transparent; 
+  color: var(--rolex-green);
+  height: 36px;
+  padding: 30px; 
+  padding: 0;
+  gap: 6px;
+}
+
+.rolex-btn.secondaryNoBorder .icon-after {
+  background-image: url("/imgRolex/arrow-green-icon.svg");
+  width: 10px;
+  height: 10px;
+}
+
+/* Espaciado para el icono dentro del Secondary CTA */
+.rolex-btn.secondary .icon-after {
+  margin-left: 8px; /* Espaciado entre Label y Icono > */
+}
+
+
+/* --- Tertiary CTA (Solo Texto/Link con Checkmark) --- */
+.rolex-btn.tertiary {
+  background: none;
+  border: none;
+  color: var(--brown); 
+  padding: 0; /* El padding horizontal de 8px se ve en la imagen */
+  height: 36px; /* Altura de 36px */
+  /* Asegura que la tipografía es correcta */
+  font-weight: var(--font-weight-bold);
+  font-size: 12px; /* Se ve 12px en la imagen */
+}
+
+.rolex-btn.tertiary:hover {
+  color: var(--green);
+}
+
+/* Icono (checkmark) en el Tertiary CTA (margin-right 6px) */
+.rolex-btn.tertiary .icon-before {
+  margin-right: 6px;
+  /* El icono también parece ser 12x12px como el texto */
+}
+
+/* --- Estilo Base para Botones Redondos --- */
+.rolex-btn-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--btn-border-radius-round); /* Círculo */
+  border: none;
+}
+
+/* --- Round button (Pequeño, Icono >) --- */
+.rolex-btn-round.default {
+  background-color: var(--white); 
+  /* Dimensiones: 44px x 44px */
+  width: 44px;
+  height: 44px;
+}
+
+/* --- Round button - Map (Mediano, Icono +) --- */
+.rolex-btn-round.map {
+  background-color: var(--brown); /* Color de fondo marrón */
+  /* Dimensiones: 36px x 36px */
+  width: 36px;
+  height: 36px;
+}
+
+/* --- Play button (Grande, Icono >) --- */
+.rolex-btn-round.play {
+  background-color: var(--white);
+  /* Dimensiones: 60px x 60px */
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Se asume una pequeña sombra */
+}
+
+/* Generales */
+
+.pageRolexLayout {
+  background-color: var(--light-beige);
+  margin: 0;
+  padding: 0;
+}
+
+.pageRolex {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-beige);
+}
+
+/* Header */
+
+.headerRolex {
+  background: var(--gradient-navigation);
+  color: #fff;
+}
+
+.headerRolex .innerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+}
+
+.headerRolex img.logo {
+  display: block;
+  width: 120px;
+  height: 60px;
+  margin: 0;
+}
+
+.headerRolex .showMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  appearance: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.headerRolex .showMenu img {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.headerRolex .innerHeader nav {
+  display: none;
+}
+
+.headerRolex .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  padding: 0 0 10px;
+}
+
+.headerRolex .breadcrumbs .sep {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.headerRolex .breadcrumbs a {
+  color: var(--white);
+}
+
+.headerRolex .breadcrumbs a:last-child {
+  color: var(--ocean-green);
+}
+
+@media (min-width: 1550px) {
+
+  .headerRolex .showMenu {
+    display: none;
+  }
+
+  .headerRolex .innerHeader nav {
+    display: block;
+  }
+
+  .headerRolex .innerHeader nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: min(30px, 2vw);
+  }
+
+  .headerRolex .innerHeader nav ul li a {
+    color: #fff;
+  }
+
+  .headerRolex .innerHeader nav ul li a:hover {
+    color: var(--ocean-green);
+    text-decoration: none;
+  }
+
+  .headerRolex .innerHeader nav ul li.active a {
+    font-weight: bold;
+    color: var(--ocean-green);
+  }
+
+}
+
+@media (max-width: 1390px) {
+
+  .headerRolex {
+    position: relative;
+  }
+
+  .headerRolex .innerHeader nav.show {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    background: var(--gradient-navigation);
+    padding: 40px 0;
+    z-index: 10;
+  }
+
+  .headerRolex .innerHeader nav.show ul {
+    width: 96%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .headerRolex .innerHeader nav.show ul li {
+    margin-bottom: 35px;
+  }
+
+  .headerRolex .innerHeader nav.show ul li a {
+    font-size: var(--font-size-fixed22);
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .headerRolex .innerHeader nav.show ul li a:hover {
+    color: var(--ocean-green);
+  }
+
+}
+
+/* Banner Slider */
+
+.bannerRolex {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 var(--margin-sep);
+}
+
+.bannerRolex.no-margin {
+  margin-bottom: 0;
+}
+
+.bannerRolex.single {
+  position: relative;
+}
+
+.bannerRolex-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.bannerRolex-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(96% - 120px);
+  max-width: calc(1500px - 120px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.bannerRolex-content .headline26 {
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+.bannerRolex-content .headline70 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+[type="light"] .bannerRolex-content {
+  color: #fff;
+}
+
+[type="light"] .bannerRolex-content .headline26 {
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+[type="light"] .bannerRolex-content .headline70 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+[type="dark"] .bannerRolex-content {
+  color: #000;
+}
+
+[type="dark"] .bannerRolex-content .headline26 {
+  margin: 0 0 5px;
+  color: #000;
+}
+
+[type="dark"] .bannerRolex-content .headline70 {
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.bannerRolex .swiper-button-custom {
+  transform: translateY(-50%);
+}
+
+.bannerRolex .swiper-button-custom.prev {
+  left: calc(4% - 30px);
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.bannerRolex .swiper-button-custom.next {
+  right: calc(4% - 30px);
+}
+
+body .bannerRolex .swiper-pagination {
+  bottom: 36px;
+}
+
+body .bannerRolex .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .bannerRolex-content {
+    width: calc(100% - 60px);
+    max-width: 100%;
+    align-items: flex-end;
+  }
+
+  .bannerRolex-content > * {
+    margin-bottom: 74px;
+  }
+
+  .bannerRolex .swiper-button-custom {
+    display: none;
+  }
+
+  .bannerRolex .swiper-pagination {
+    bottom: 16px;
+  }
+}
+
+
+/* Push */
+
+.pushRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.pushRolex.odd {
+  background-color: var(--beige);
+  padding: var(--margin-sep) 0;
+}
+
+.pushRolex picture {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.pushRolex .headline36 {
+  margin: 0 0 6px;
+  color: var(--brown);
+}
+
+.pushRolex .headline36.main {
+  margin: 0 0 20px;
+}
+
+.pushRolex .fixed14, 
+.pushRolex .fixed16 {
+  margin: 0 0 4px;
+  color: var(--brown);
+}
+
+.pushRolex .body24-bold {
+  color: var(--brown);
+}
+
+.pushRolex .body20-light {
+  margin: 0;
+  padding: 0 0 6px;
+  color: var(--black);
+}
+
+.pushRolexGrid .rolex-grid > div {
+  margin-bottom: calc(40px - var(--rolex-grid-gap-default));
+}
+
+
+/* Introduction */
+
+.introductionRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.introductionRolex .headline50 {
+  margin: 0 0 20px;
+  color: var(--brown)
+}
+
+.introductionRolex .secondaryNoBorder {
+  margin: 20px 0 0;
+}
+
+.introductionRolex p {
+  color: var(--black);
+}
+
+
+/* Body Text */
+
+.bodyTextRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.bodyTextRolex.odd {
+  background-color: var(--beige);
+  padding: var(--margin-sep) 0;
+}
+
+.bodyTextRolex.odd.no-margin-top {
+  margin-top: calc(var(--margin-sep) * -1);
+}
+
+.bodyTextRolex.odd.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.bodyTextRolex .headline50 {
+  margin: 0 0 20px;
+  color: var(--brown);
+}
+
+.bodyTextRolex p {
+  color: var(--black);
+}
+
+.bodyTextRolex .primary {
+  margin: 30px 0 0;
+}
+
+.bodyTextRolex .img-before-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 var(--margin-sep);
+}
+
+.bodyTextRolex .logo-rolex-before img {
+  width: 200px;
+  margin-bottom: calc( var(--margin-sep) / 1.5);
+}
+
+.bodyTextRolex .img-after-wrapper img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: var(--margin-sep) auto 0;
+}
+
+.bodyTextRolex.modelInfo .rolex-grid > div {
+  margin: 0 0 var(--margin-sep);
+}
+
+.bodyTextRolex.modelInfo picture {
+  display: block;
+  margin: 20px 0 0;
+}
+
+
+/* Article Introduction */
+
+.articleIntroduction {
+  margin: 0 0 var(--margin-sep);
+}
+
+.articleIntroduction .headline50 {
+  margin: 0 0 20px;
+  color: var(--brown);
+}
+
+.articleIntroduction .headline30, 
+.articleIntroduction .headline26, 
+.articleIntroduction .headline24 {
+  margin: 0 0 20px;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.articleIntroduction .body24-light {
+  margin: 0 0 20px;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.articleIntroduction .body20-light {
+  color: var(--black);
+}
+
+
+/* Article Introduction */
+
+.quoteRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.quoteRolex .quote50 {
+  margin: 0 0 20px;
+  color: var(--black);
+}
+
+.quoteRolex .body20-light {
+  color: var(--black);
+}
+
+
+/* Images Rolex */
+
+.imagesRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.imagesRolex.odd {
+  background-color: var(--beige);
+  padding: var(--margin-sep) 0;
+}
+
+.imagesRolex.odd.noMarginBottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.imagesRolex.noPadding {
+  margin: 0 0 0 0;
+}
+
+.imagesRolex .rolex-grid.center .rolex-col-lg-12 {
+  width: 100%;  
+  margin: 0;
+}
+
+.imagesRolex.noPadding .rolex-grid.center .rolex-col-lg-8 {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.imagesRolex img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Video Section */
+
+.imagesRolex .video-embed-container {
+  position: relative;
+  padding-bottom: 53.9%; /* 16:9 aspect ratio */
+  padding-top: 25px;
+  height: 0;
+}
+
+.imagesRolex .video-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Collection */
+
+.collectionRolex {
+  margin: 0 0 var(--margin-sep);
+}
+
+.collectionRolex .collection-title {
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.collectionRolex .collection-grid {
+  margin: 0 0 40px;
+}
+
+.collectionRolex .rolex-item {
+  background-color: var(--beige);
+  padding: 5% 50px 50px 50px;
+  box-sizing: border-box;
+}
+
+.collectionRolex .rolex-item:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .collectionRolex .collection-title {
+    margin: 0 0 40px;
+  }
+  .collectionRolex .collection-grid {
+    margin: 0 0 30px;
+  }
+  .collectionRolex .rolex-item {
+    padding: 0 20px 30px;
+  }
+}
+
+.collectionRolex .rolex-item .product-info {
+  
+}
+
+.collectionRolex .rolex-item .product-info h4 {
+  margin: 0 0 2px;
+}
+
+.collectionRolex .rolex-item .product-info h3 {
+  margin: 0 0 5px;
+}
+
+.collectionRolex .rolex-item .product-info h5 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.collectionRolex .rolex-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.collectionRolex.colAccessoryRolex picture {
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.collectionRolex.colAccessoryRolex picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collectionRolex.festiva1 {
+  margin-bottom: -30px;
+}
+
+.collectionRolex.festiva2 {
+  margin-top: -40px;
+}
+
+@media (max-width: 768px) {
+  .collectionRolex.festiva1 {
+    margin-bottom: -20px;
+  }
+
+  .collectionRolex.festiva2 {
+    margin-top: -30px;
+  }
+}
+
+/* Map Section */
+
+.rolexMapSection .viewModeToggle {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 20px;
+  gap: 40px;
+}
+
+.rolexMapSection .viewModeToggle button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+}
+
+.rolexMapSection .viewModeToggle button.active {
+  color: var(--rolex-green);
+  position: relative;
+}
+
+.rolexMapSection .viewModeToggle button.active:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--rolex-green);
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+}
+
+.mapContainer {
+  position: relative;
+  height: 600px;
+  margin: 0 0 var(--margin-sep);
+  overflow: hidden;
+}
+
+.mapContainer .storeInfo.hidden {
+  left: min(-25vw, -410px);
+  transition: all 0.3s ease-in-out;
+}
+
+.mapContainer .storeInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 410px;
+  width: 25vw;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.mapContainer .storeInfo .storeImage img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.mapContainer .storeInfo .storeDetails {
+  padding: 40px 15%;
+  position: relative;
+}
+
+.mapContainer .storeInfo .closeButton {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 700;
+}
+
+.mapContainer .storeInfo .storeLegend {
+  margin: 0 0 6px;
+}
+
+.mapContainer .storeInfo .storeHeadline {
+  margin: 0 0 20px;
+}
+
+.mapContainer .storeInfo .storeAddress {
+  margin: 0 0 20px;
+}
+
+.mapContainer .storeInfo .storeAddress p {
+  padding: 0 0 6px;
+}
+
+.mapContainer .storeInfo .contactButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rolexMapSection .rolex-btn.tertiary {
+  text-indent: -999999em;
+}
+
+.rolexMapSection .rolex-btn.tertiary .icon-before {
+  width: 36px;
+  height: 36px;
+  background-color: var(--beige);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
+
+.rolexMapSection .rolex-btn.tertiary:hover {
+  text-decoration: none;
+}
+
+.rolexMapSection .rolex-btn.tertiary.phone .icon-before{
+  background-image: url("../../../public/imgRolex/assets/phone-brown-icon.svg");
+}
+.rolexMapSection .rolex-btn.tertiary.phone:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/phone-green-icon.svg");
+}
+
+.rolexMapSection .rolex-btn.tertiary.mail .icon-before{
+  background-image: url("../../public/imgRolex/assets/mail-brown-icon.svg");
+}
+.rolexMapSection .rolex-btn.tertiary.mail:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/mail-green-icon.svg");
+}
+
+.rolexMapSection .rolex-btn.tertiary.direction .icon-before{
+  background-image: url("../../public/imgRolex/assets/get-direction-brown-icon.svg");
+}
+.rolexMapSection .rolex-btn.tertiary.direction:hover .icon-before {
+  background-image: url("../../public/imgRolex/assets/get-direction-green-icon.svg");
+}
+
+.rolexMapSection .rolex-btn.tertiary.whatsapp .icon-before{
+  background-image: url("../../public/imgRolex/assets/whatsapp-brown-icon.svg");
+}
+.rolexMapSection .rolex-btn.tertiary.whatsapp:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/whatsapp-green-icon.svg");
+}
+
+.rolexMapSection .rolex-btn.tertiary.plus .icon-before{
+  background-image: url("../../public/imgRolex/assets/more-brown-icon.svg");
+}
+.rolexMapSection .rolex-btn.tertiary.plus:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/more-green-icon.svg");
+}
+
+.rolexMapSection .storesListContainer {
+  margin: 0 0 var(--margin-sep);
+}
+
+.rolexMapSection .storesListContainer .storeList {
+  gap: var(--margin-sep);
+}
+
+.rolexMapSection .storesListContainer .storeListItem {
+  background-color: var(--white);
+  padding: 40px 3%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.rolexMapSection .storesListContainer .storeListItem .storeLegend {
+  margin: 0 0 6px;
+}
+
+.rolexMapSection .storesListContainer .storeListItem .storeHeadline {
+  margin: 0 0 30px;
+}
+
+.rolexMapSection .storesListContainer .storeAddress {
+  margin: 0 0 30px;
+}
+
+.rolexMapSection .storesListContainer .storeAddress p {
+  padding: 0 0 2px;
+}
+
+@media (max-width: 768px) {
+  .mapContainer .storeInfo {
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .mapContainer .storeInfo .storeImage {
+    display: none;
+  }
+}
+
+/* Map Single*/
+
+.rolexSingleStoreSection {
+  margin: 0 auto 0;
+}
+
+.rolexSingleStoreSection.margin {
+  margin: 0 auto var(--margin-sep);
+}
+
+.rolexSingleStoreSection .storeCols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.rolexSingleStoreSection .storeCols .col2 {
+  width: 35vw;
+  min-width: 410px;
+}
+
+.rolexSingleStoreSection .storeCols .col1 {
+  flex: 1;
+}
+
+.rolexSingleStoreSection .singleStoreInfo {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 10%;
+  box-sizing: border-box;
+}
+
+.rolexSingleStoreSection .singleStoreInfo .storeAddress {
+  margin: 0 0 20px;
+}
+
+.rolexSingleStoreSection.rolexMapSection .contactButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rolexSingleStoreSection.rolexMapSection .rolex-btn.tertiary {
+  text-indent: 0;
+}
+
+.rolexSingleStoreSection.rolexMapSection .storeSchedules {
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.rolexSingleStoreSection.rolexMapSection .storeSchedules .isopen {
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.rolexSingleStoreSection.rolexMapSection .storeSchedules .today .dropdown {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-image: url("../../public/imgRolex/assets/drop-down-green-button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-left: 6px;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.rolexSingleStoreSection.rolexMapSection .horariosDrop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--beige);
+  padding: 30px 40px 20px;
+  box-sizing: border-box;
+  display: block;
+  z-index: 10;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rolexSingleStoreSection.rolexMapSection .horariosDrop p {
+  padding: 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.rolexSingleStoreSection.rolexMapSection .horariosDrop p span.day {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+
+  .rolexSingleStoreSection .storeCols .col1 {
+    order: 2;
+    flex: auto;
+    height: 500px;
+    width: 100%;
+  }
+
+  .rolexSingleStoreSection .storeCols .col2 {
+    order: 1;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .rolexSingleStoreSection .singleStoreInfo {
+    padding: 40px;
+  }
+
+  .rolexSingleStoreSection.rolexMapSection .contactButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .rolexSingleStoreSection.rolexMapSection .rolex-btn.tertiary {
+    text-indent: -99999em;
+  }
+
+}
+
+/* Model Rolex */
+
+.modelRolex {
+  padding: 0 0 var(--margin-sep);
+  background-color: var(--light-beige);
+  margin: 0;
+}
+
+.modelRolex .contentWrap {
+  position: relative;
+  height: 100%;
+}
+
+.modelRolex .contentWrap .rolex-grid {
+  height: 90vh;
+  align-items: center;
+}
+
+.modelRolex .model-image {
+  position: relative;
+}
+
+/* Desktop: Mostrar solo imagen principal */
+.modelRolex .model-image-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile: Ocultar imagen principal, mostrar carrusel */
+.modelRolex .model-image-mobile {
+  display: none;
+}
+
+.modelRolex .model-image picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos del carrusel de galería en mobile */
+.modelRolex .model-gallery-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom.prev {
+  left: 10px;
+  transform: translateY(-50%) rotate(180deg);
+  display: none;
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom.prev:hover {
+  transform: translateY(-50%) rotate(180deg) scale(1.1);
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom.next {
+  right: 10px;
+  display: none;
+}
+
+.modelRolex .model-image-mobile .swiper-button-custom svg {
+  width: 12px;
+  height: 15px;
+  color: var(--rolex-brown);
+}
+
+.modelRolex .model-gallery-swiper .swiper-pagination {
+  bottom: 10px;
+}
+
+.modelRolex .model-gallery-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.modelRolex .model-gallery-swiper .swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 1);
+}
+
+.modelRolex .contentWrap .rolex-grid img {
+  height: 90vh;
+  width: auto;
+}
+
+.modelRolex .model-info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.modelRolex .model-info .model-info-main {
+  margin: 0 0 30px;
+  font-weight: normal;
+}
+
+.modelRolex .model-info .model-info-main h4 {
+  margin: 0;
+}
+
+.modelRolex .model-info .model-info-main h2 {
+  margin: 0 0 10px;
+}
+
+.modelRolex .model-info .model-info-main h3 {
+  margin: 0;
+}
+
+.modelRolex .model-info .model-info-main h5 {
+  margin: 0;
+}
+
+.modelRolex .model-info .model-info-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 40px;
+  justify-items: start;
+}
+
+.modelRolex .model-info .model-info-btns.ctas3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary .icon-before {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.phone .icon-before{
+  background-image: url("../../public/imgRolex/assets/phone-brown-button.svg");
+}
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.phone:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/phone-green-button.svg");
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.chat .icon-before{
+  background-image: url("../../public/imgRolex/assets/chat-brown-button.svg");
+}
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.chat:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/chat-green-button.svg");
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.mail .icon-before{
+  background-image: url("../../public/imgRolex/assets/mail-brown-button.svg");
+}
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.mail:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/mail-green-button.svg");
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.appointment .icon-before{
+  background-image: url("../../public/imgRolex/assets/appointment-brown-button.svg");
+}
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.appointment:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/appointment-green-button.svg");
+}
+
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.place .icon-before{
+  background-image: url("../../public/imgRolex/assets/find-us-brown-button.svg");
+}
+.modelRolex .model-info .model-info-btns .rolex-btn.tertiary.place:hover .icon-before{
+  background-image: url("../../public/imgRolex/assets/find-us-green-button.svg");
+}
+
+@media (max-width: 768px) {
+  .modelRolex {
+    padding: 30px 0 50px;
+  }
+
+  .modelRolex .contentWrap {
+    height: auto;
+  }
+
+  .modelRolex .contentWrap .rolex-grid {
+    height: auto;
+  }
+
+  .modelRolex .contentWrap .rolex-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modelRolex .model-info {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    order: 2;
+  }
+
+  /* En mobile: Ocultar imagen desktop y mostrar carrusel */
+  .modelRolex .model-image-desktop {
+    display: none !important;
+  }
+
+  .modelRolex .model-image-mobile {
+    display: block;
+  }
+
+  .modelRolex .model-image {
+    order: 1;
+  }
+
+  .modelRolex .model-info .model-info-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .modelRolex .model-info .model-info-btns .rolex-btn {
+    text-indent: -99999em;
+  }
+}
+
+/* Model Watch Gallery */
+
+.modelWatchGallery {
+  padding: 0 0 var(--margin-sep);
+  margin: 0;
+}
+.modelWatchGallery .gallery-thumb {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.modelGallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: var(--light-beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  color: var(--white);
+}
+
+.modelGallery-lightbox .lightbox-image {
+  width: 50vw;
+}
+.modelGallery-lightbox .lightbox-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.modelGallery-lightbox .lightbox-img {
+  animation: modelGallerySlideIn 0.4s ease;
+}
+.modelGallery-lightbox .lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: #d4d4d4;
+  border-radius: 50%;
+  border: none;
+  color: var(--black);
+  font-size: 32px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-indent: -999999em;
+}
+
+.modelGallery-lightbox .lightbox-close:before {
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: #452c1e;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+
+.modelGallery-lightbox .lightbox-close:after {
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: #452c1e;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+}
+
+.modelGallery-lightbox .lightbox-arrow {
+  background-color: #d4d4d4;
+  color: var(--black);
+  border: none;
+  font-size: 32px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+  text-indent: -999999em;
+  background-image: url("../../public/imgRolex/assets/arrowRight.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 9px auto;
+  cursor: pointer;
+}
+
+.modelGallery-lightbox .lightbox-arrow:hover {
+  opacity: 0.8;
+}
+.modelGallery-lightbox .lightbox-arrow.prev {
+  position: absolute;
+  right: calc(50% + 25vw + 30px);
+  transform: rotate(180deg);
+}
+.modelGallery-lightbox .lightbox-arrow.next {
+  position: absolute;
+  left: calc(50% + 25vw + 30px);
+}
+
+.modelGallery-lightbox .lightbox-dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  gap: 0;
+}
+.modelGallery-lightbox .lightbox-dots .dot {
+  width: 24px;
+  height: 4px;
+  border-radius: 4px;
+  border: 0;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 8px;
+  transition: all 0.2s ease-in-out;
+}
+.modelGallery-lightbox .lightbox-dots .dot.active {
+  background: #007b3c;
+  width: 50px;
+}
+
+@keyframes modelGallerySlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1300px) {
+  .modelGallery-lightbox .lightbox-image {
+    width: 66vw;
+  }
+  .modelGallery-lightbox .lightbox-arrow.prev {
+    right: calc(50% + 33vw + 30px);
+  }
+  .modelGallery-lightbox .lightbox-arrow.next {
+    left: calc(50% + 33vw + 30px);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .modelGallery-lightbox .lightbox-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .modelWatchGallery {
+    display: none;
+  }
+}
+
+
+/* Model Key Selling */
+
+.modelKeySelling {
+  padding: 5% 50px 50px 50px;
+  margin-bottom: var(--margin-sep);
+}
+
+.modelKeySelling .accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modelKeySelling .accordion-container .item {
+  border-top: 1px solid var(--border-light);
+  padding: 0;
+  margin: 0;
+}
+
+.modelKeySelling .accordion-container .item:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modelKeySelling .accordion button.accordion-header {
+  font-family: var(--font-family-base);
+  appearance: none;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.modelKeySelling .accordion .accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.modelKeySelling .accordion .accordion-content-inner {
+  padding: 0px 0 30px;
+}
+
+.modelKeySelling .accordion .accordion-content.is-open {
+  opacity: 1;
+  max-height: 500px;
+}
+
+/* Model Watch Specifications */
+
+.modelWatchSpecifications {
+  margin: 0 0 var(--margin-sep);
+}
+
+.modelWatchSpecifications .contentWrap {
+  background-color: var(--beige);
+  padding: 10vh 9.5%;
+  height: max-content;
+  box-sizing: border-box;
+}
+
+.modelWatchSpecifications .specsGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12%;
+}
+
+.modelWatchSpecifications .item {
+  padding: 0;
+  margin-bottom: 20px;
+  width: 25%;
+}
+
+.modelWatchSpecifications .item span {
+  display: block;
+  color: var(--brown);
+  padding: 0 0 10px;
+}
+
+.modelWatchSpecifications .item p {
+  color: var(--black);
+}
+
+.modelWatchSpecifications .divider-horizontal {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-light);
+  margin: 40px 0 40px;
+}
+
+@media (max-width: 1440px) {
+  .modelWatchSpecifications .contentWrap {
+    padding: 8vh 5.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modelWatchSpecifications .contentWrap {
+    padding: 7vh 5.5%;
+  }
+
+  .modelWatchSpecifications .specsGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6%;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+  }
+
+  .modelWatchSpecifications .item {
+    padding: 0;
+    margin-bottom: 20px;
+    width: 46%;
+  }
+}
+
+/* Model Availability */
+
+.modelAvailability {
+  margin: 0 0 var(--margin-sep);
+}
+
+.modelAvailability .contentWrap {
+  background-color: var(--beige);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.modelAvailability .contentWrap img.crown {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 60px;
+}
+
+.modelAvailability .contentWrap .headline70 {
+  margin: 0 0 20px;
+}
+
+.modelAvailability .contentWrap .content-body {
+  font-size: var(--font-size-body24);
+}
+
+.modelAvailability .contentWrap .content-body p {
+  font-size: var(--font-size-body24);
+  padding: 0 0 30px;
+}
+
+@media (max-width: 1440px) {
+  .modelAvailability .contentWrap {
+    padding: 100px 0 ;
+  }
+}
+
+@media (max-width: 768px) {
+  .modelAvailability .contentWrap {
+    padding: 60px 0 ;
+  }
+}
+
+/* Model Contact */
+
+.modelContact {
+  margin: 0 0 var(--margin-sep);
+}
+
+.modelContact .accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modelContact .accordion-container .item {
+  border-top: 1px solid var(--border-light);
+  padding: 0;
+  margin: 0;
+}
+
+.modelContact .accordion-container .item:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modelContact .accordion button.accordion-header {
+  font-family: var(--font-family-base);
+  appearance: none;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.modelContact .accordion .accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  background-color: var(--white);
+}
+
+.modelContact .accordion .accordion-content-inner {
+  padding: 0px 0 40px;
+  text-align: center;
+}
+
+.modelContact .accordion .accordion-content.is-open {
+  opacity: 1;
+  max-height: 2000px;
+}
+
+.modelContact .conEpigrafe {
+  margin: 60px 0 6px;
+}
+
+.modelContact .conHeadline {
+  margin: 0 0 30px;
+}
+
+.modelContact .conText {
+  margin: 0 0 30px;
+}
+
+.modelContact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: none;
+}
+
+.modelContact form textarea {
+  display: block;
+  width: 100%;
+  background-color: var(--beige);
+  border: 0;
+  padding: 40px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body20);
+  outline: none;
+}
+
+.modelContact form textarea.textareaTarget {
+  display: none;
+}
+
+.modelContact form .form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+
+.modelContact form .form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  width: 100%;
+}
+
+.modelContact form .form-row .form-field.small {
+  width: 240px;
+}
+
+.modelContact form .form-field label {
+  color: var(--brown50)
+}
+
+.modelContact form .form-field select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  background-color: var(--light-beige);
+  background-image: url("../../public/imgRolex/assets/drop-down-black-button.svg");
+  background-size: 12px auto;
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--brown40);
+  padding: 10px 10px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body20);
+  font-weight: 900;
+  margin: 0;
+  outline: none;
+}
+
+.modelContact form .form-field input {
+  display: block;
+  width: calc(100% - 20px);
+  background-color: var(--light-beige);
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--brown40);
+  padding: 11px 10px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body20);
+  font-weight: 900;
+  margin: 0;
+  outline: none;
+}
+
+.modelContact form .error-text {
+  color: var(--red);
+  font-size: var(--font-size-legend20);
+  font-weight: 700;
+  margin: 4px 0 0;
+  text-align: left;
+}
+
+.modelContact form .checkbox-list {
+  width: 100%;
+}
+
+.modelContact form .checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-legend20);
+}
+
+.modelContact form .checkbox-item a {
+  color: var(--rolex-green);
+  font-weight: 700;
+}
+
+.modelContact form .obligatorio {
+  font-weight: 700;
+  text-align: left;
+  display: block;
+  margin: 10px 0 0;
+}
+
+.modelContact .fade-in {
+  opacity: 0;
+  animation: modelContactFadeIn 0.6s forwards ease-out;
+}
+
+.modelContact .fade-out {
+  opacity: 1;
+  animation: modelContactFadeOut 0.6s forwards ease-out;
+}
+
+@keyframes modelContactFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modelContactFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .modelContact .accordion .accordion-content-inner {
+    padding: 0 25px 40px;
+  }
+
+  .modelContact .conEpigrafe {
+    margin: 40px 0 6px;
+  }
+
+  .modelContact .conHeadline {
+    margin: 0 0 30px;
+  }
+
+  .modelContact .conText {
+    margin: 0 0 30px;
+  }
+}
+
+/* Keep Exploring */
+
+/* --- SLIDER ROLEX --- */
+.keepExploring {
+  position: relative;
+  padding: 4rem 0;
+  background-color: var(--white);
+}
+
+.keepExploring .headline36 {
+  margin: 0 0 20px;
+  padding: 0 45px;
+}
+
+body .rolex-swiper {
+  position: relative;
+  padding: 0 0px 60px;
+}
+
+
+/* --- Flechas de navegación --- */
+.rolex-swiper-wrap {
+  position: relative;
+  padding: 0 45px;
+}
+
+.swiper-button-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-160%);
+  z-index: 5;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--light-grey);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007b3c;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.swiper-button-custom:hover {
+  background-color: var(--grey);
+  color: #fff;
+}
+
+.swiper-button-custom.prev {
+  left: 0px;
+  transform: translateY(-160%) rotate(-180deg);
+}
+
+.swiper-button-custom.next {
+  right: 0px;
+}
+
+.swiper-button-custom svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 1px 0 0;
+}
+
+.swiper-button-custom svg path {
+  fill: var(--black);
+}
+
+/* --- Paginación --- */
+body .swiper-pagination-bullets {
+  bottom: 0;
+  text-align: center;
+}
+
+body .swiper-pagination-bullet {
+  background: #ccc !important;
+  opacity: 1;
+  width: 24px !important;
+  height: 4px;
+  margin: 0 8px !important;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+body .swiper-pagination-bullet-active {
+  background: #007b3c !important;
+  width: 50px !important;
+}
+
+/* --- Items del slider --- */
+.rolex-slide-item {
+  text-align: left;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.rolex-slide-item:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.rolex-slide-item .body20-bold {
+  margin: 10px 0 0;
+}
+
+.rolex-slide-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Footer */
+
+.footerRolex {
+  background: var(--gradient-navigation);
+}
+
+.footerRolex .ico {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerRolex .ico img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.footerRolex .gototop {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.footerRolex .iconTop {
+  appearance: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footerRolex .iconTop img {
+  display: block;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-90deg);
+}

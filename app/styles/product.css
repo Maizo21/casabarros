@@ -1,0 +1,457 @@
+/*
+* --------------------------------------------------
+* routes/products.$handle.tsx
+* --------------------------------------------------
+*/
+.product {
+  display: grid;
+  margin: 20px 0;
+  overflow: hidden;
+  @media (min-width: 45em) {
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+/* Galería */
+
+/* Contenedor: fila + wrap */
+.product-gallery {
+  display: flex;   /* fuerza flex por si algo lo pisa */
+  flex-wrap: wrap;
+  gap: 2rem;                  /* separaciones */
+}
+
+.product-gallery a {
+  cursor: zoom-in;
+}
+
+/* Primera imagen: ocupa todo el ancho */
+.product-gallery > .product-image:first-child {
+  flex: 0 0 100%;
+}
+
+/* Resto: dos columnas (50% menos el gap) */
+.product-gallery > .product-image:not(:first-child) {
+  flex: 0 0 calc(50% - (1rem + 2px));
+  max-width: calc(50% - (1rem + 2px));
+}
+
+/* Ajustes visuales */
+.product-gallery > .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--color-border2);
+}
+
+.product-gallery > .product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* (Opcional) en pantallas pequeñas: 1 columna abajo */
+@media (max-width: 640px) {
+  .product-gallery > .product-image:not(:first-child) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Info */
+
+.product h1 {
+  margin-top: 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.product .product-price {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.product .iva {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.product-main {
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+}
+
+.product-price-on-sale {
+  display: flex;
+  grid-gap: 0.5rem;
+}
+
+.product-price-on-sale s {
+  opacity: 0.5;
+}
+
+.product-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 0.75rem;
+}
+
+.product-options-item,
+.product-options-item:disabled {
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.product-option-label-swatch {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.25rem 0;
+}
+
+.product-option-label-swatch img {
+  width: 100%;
+}
+
+.product .product-form {
+  margin: 0 0 10px;
+}
+
+.product-quantity-and-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin: 0 0 40px;
+}
+
+.product .product-form form {
+  max-width: 100%;
+  width: 100%;
+}
+
+.product .product-form form button {
+  padding: 15px 40px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: var(--color-gold);
+  color: var(--color-light);
+  border: none;
+  cursor: pointer;
+  font-family: 'Noto Serif', serif;
+  width: 100%;
+  border-radius: 40px;
+}
+
+/* Botones de cantidad */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border2, #ccc);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 180px;
+  height: 47.5px;
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.quantity-selector input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.qty-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #ffffff;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+}
+
+.qty-btn:hover {
+  color: #000;
+}
+
+/* Adaptación al botón de carrito */
+.product-quantity-and-cart button[type='submit'] {
+  flex: 1;
+}
+
+/* details / summary - collapsible description with animation */
+details {
+  background: var(--color-light);
+  margin-bottom: 1rem;
+  overflow: visible;
+  outline: none;
+}
+
+/* make the summary a clean interactive row */
+details summary {
+  list-style: none; /* remove default marker */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  user-select: none;
+  background-color: #f2f2f2;
+  color: var(--color-dark);
+}
+
+/* hide native marker on webkit */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* chevron indicator */
+details summary::after {
+  content: "▾";
+  display: inline-block;
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  transform-origin: center;
+  transition: transform 240ms ease;
+}
+
+/* rotate chevron when open */
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* animated content area */
+details > div {
+  padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 320ms ease, opacity 240ms ease, transform 240ms ease;
+  will-change: max-height, opacity, transform;
+  font-size: 0.75rem;
+}
+
+/* when open, allow content to flow (large enough max-height for typical content) */
+details[open] > div {
+  max-height: 1200px; /* large enough for expected content; clamps smooth animation */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+details > div p {
+  font-size: 0.875rem;
+}
+
+details[open] > div img {
+  max-width: 100%;
+}
+
+/* focus style for keyboard users */
+details summary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(223, 206, 126, 0.18); /* subtle gold halo */
+  border-radius: 6px;
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  details summary::after,
+  details > div,
+  details[open] > div {
+    transition: none;
+    transform: none;
+  }
+  details > div {
+    max-height: none;
+    opacity: 1;
+  }
+}
+
+
+
+/* ======== SWIPER PRINCIPAL ======== */
+
+.product-gallery-slider {
+  display: none;
+  width: 96vw;               /* ocupa todo el ancho del viewport */
+  max-width: 100%;            /* elimina la limitación de 700px */
+  margin: 0  0 2rem; 
+  overflow: hidden;           /* evita scroll lateral */
+  box-sizing: border-box;
+}
+
+.main-swiper {
+  position: relative;
+}
+
+/* Asegura que los slides no se pasen del ancho */
+.main-swiper,
+.thumbs-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-swiper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* ======== FLECHAS ======== */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* color base de las flechas */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #000;
+  color: #fff;
+}
+
+.swiper-button-prev .swiper-navigation-icon,
+.swiper-button-next .swiper-navigation-icon {
+  display: none !important;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.swiper-button-prev.custom-arrow {
+  left: 8px;
+}
+
+.swiper-button-next.custom-arrow {
+  right: 8px;
+}
+
+.custom-arrow svg {
+  width: auto;
+  height: auto;
+  fill: none;
+}
+
+.custom-arrow:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+/* ======== PAGINACIÓN (PUNTOS) ======== */
+.swiper-pagination {
+  bottom: 8px !important;
+}
+
+.custom-bullet {
+  background-color: #ccc;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  background-color: #000; /* cambia aquí el color activo */
+  transform: scale(1.2);
+}
+
+/* ======== MINIATURAS ======== */
+.thumbs-swiper {
+  margin-top: 10px;
+}
+
+.thumbs-swiper .swiper-slide {
+  opacity: 0.6;
+  cursor: pointer;
+  border: 1px solid var(--color-border2);
+  border-radius: 0px;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 1px solid var(--color-border);
+  border-radius: 0px;
+}
+
+.thumbs-swiper img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+
+/* A partir de 768px (típico breakpoint "md"), invertimos */
+@media (max-width: 768px) {
+  
+  .product-gallery {
+    display: none;
+  }
+
+  .product-gallery-slider {
+    display: block;
+  }
+
+}

@@ -1,0 +1,94 @@
+.banner-doble-simple {
+  margin: 4rem auto;
+}
+
+/* Contenedor principal con altura controlada */
+.banner-doble-simple .contentWrap {
+  height: 70vh;
+  min-height: 900px;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid de dos columnas centradas */
+.banner-doble-simple-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center; /* centra verticalmente cada columna */
+  height: 100%;
+}
+
+/* Cada ítem ocupa toda la altura del contenedor */
+.banner-doble-simple-items .banner-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 🔥 centra todo verticalmente */
+  height: 100%;
+}
+
+.banner-doble-simple-items .banner-link {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Imagen centrada dentro del ítem */
+.banner-doble-simple-items .banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Texto */
+.banner-doble-simple-items .banner-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #000;
+}
+
+.banner-doble-simple-items .banner-cta {
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.banner-doble-simple-items .banner-cta:hover {
+  color: #444;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .banner-doble-simple .contentWrap {
+    height: auto;
+    max-height: none;
+  }
+
+  .banner-doble-simple-items {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .banner-doble-simple-items .banner-item {
+    height: auto;
+  }
+
+  .banner-doble-simple-items .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
